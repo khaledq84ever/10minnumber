@@ -18,6 +18,15 @@ const SESSIONS_PER_IP_PER_HOUR = 5;
 
 const db = require("./db");
 
+// Auto-seed pool numbers from env (Railway): SEED_NUMBERS="+18603514112:US,+1555:US"
+for (const entry of (process.env.SEED_NUMBERS || "").split(",")) {
+  const [e164, country = "US"] = entry.trim().split(":");
+  if (/^\+\d{8,15}$/.test(e164 || ""))
+    db.prepare(
+      "INSERT INTO numbers (e164, country) VALUES (?, ?) ON CONFLICT(e164) DO UPDATE SET active = 1",
+    ).run(e164, country.toUpperCase());
+}
+
 const app = express();
 app.set("trust proxy", false);
 app.use(express.json());
