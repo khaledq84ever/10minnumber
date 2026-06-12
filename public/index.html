@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>10MinNumber — رقم مؤقت لاستقبال SMS</title>
+    <meta
+      name="description"
+      content="رقم هاتف مؤقت مجاني لاستقبال رسائل التحقق SMS — بدون تسجيل. Free temporary phone number to receive verification SMS."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand"><span class="brand-10">10</span>MinNumber</div>
+      <button id="langBtn" class="lang" aria-label="Switch language">EN</button>
+    </header>
+
+    <main>
+      <!-- Landing -->
+      <section id="landing" class="hero">
+        <div class="hero-icon">📱</div>
+        <h1 data-i18n="hero_title">رقم هاتف مؤقت — استقبل رسائل SMS حقيقية</h1>
+        <p class="sub" data-i18n="hero_sub">
+          احصل على رقم لمدة ١٠ دقائق لاستقبال رموز التحقق عند التسجيل في
+          المواقع. بدون حساب، بدون تسجيل.
+        </p>
+        <button id="getBtn" class="btn-primary" data-i18n="get_number">
+          احصل على رقم الآن
+        </button>
+        <p class="note" data-i18n="voip_note">
+          ملاحظة: بعض المواقع الكبيرة (مثل واتساب وجوجل) قد ترفض الأرقام
+          الافتراضية.
+        </p>
+      </section>
+
+      <!-- Active session -->
+      <section id="session" class="session hidden">
+        <div class="num-card">
+          <div class="flag" id="flag">🇺🇸</div>
+          <div class="number" id="number" dir="ltr">…</div>
+          <button id="copyNum" class="btn-copy" data-i18n="copy">نسخ</button>
+        </div>
+        <div class="timer-row">
+          <div class="timer" id="timer" dir="ltr">10:00</div>
+          <button id="extendBtn" class="btn-ghost" data-i18n="extend">
+            +١٠ دقائق
+          </button>
+        </div>
+        <div class="inbox">
+          <h2 data-i18n="inbox">الرسائل الواردة</h2>
+          <p class="waiting" id="waiting" data-i18n="waiting">
+            في انتظار الرسائل… استخدم الرقم أعلاه في أي موقع وستظهر الرسالة هنا
+            خلال ثوانٍ.
+          </p>
+          <div id="messages"></div>
+        </div>
+      </section>
+
+      <!-- Expired -->
+      <section id="expired" class="hero hidden">
+        <div class="hero-icon">⏰</div>
+        <h1 data-i18n="expired_title">انتهت صلاحية الرقم</h1>
+        <button id="againBtn" class="btn-primary" data-i18n="get_another">
+          احصل على رقم جديد
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span data-i18n="credit">برمجة</span>
+      <a
+        href="https://x.com/KhaledQ84Ever"
+        target="_blank"
+        rel="noopener noreferrer"
+        >@KhaledQ84Ever</a
+      >
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

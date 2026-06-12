@@ -1,0 +1,238 @@
+:root {
+  --red: #e8001c;
+  --navy: #0a0e27;
+  --gold: #d4a843;
+  --bg: #0a0e27;
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f2f4ff;
+  --muted: #9aa3c7;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html[lang="ar"] body {
+  font-family: "Tajawal", sans-serif;
+}
+html[lang="en"] body {
+  font-family: "Inter", sans-serif;
+}
+body {
+  background: radial-gradient(
+    1200px 600px at 50% -10%,
+    #18204d 0%,
+    var(--bg) 60%
+  );
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+.brand-10 {
+  color: var(--red);
+}
+.lang {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px 48px;
+}
+.hero {
+  max-width: 560px;
+  text-align: center;
+  padding-top: 8vh;
+}
+.hero-icon {
+  font-size: 56px;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-size: clamp(24px, 5vw, 34px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+.sub {
+  color: var(--muted);
+  margin: 14px 0 26px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.note {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 18px;
+}
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+  border: 0;
+  border-radius: 14px;
+  padding: 15px 34px;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 8px 28px rgba(232, 0, 28, 0.35);
+  transition: transform 0.15s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  transform: none;
+  cursor: wait;
+}
+
+.session {
+  width: 100%;
+  max-width: 560px;
+}
+.num-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.flag {
+  font-size: 28px;
+}
+.number {
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 8px 0 14px;
+  font-family: "Inter", monospace;
+}
+.btn-copy,
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 10px;
+  padding: 9px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.btn-copy:hover,
+.btn-ghost:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+.timer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 2px;
+}
+.timer {
+  font-size: 30px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.timer.low {
+  color: var(--red);
+}
+.inbox h2 {
+  font-size: 16px;
+  color: var(--gold);
+  margin: 18px 0 12px;
+}
+.waiting {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.msg {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  animation: pop 0.25s ease;
+}
+@keyframes pop {
+  from {
+    transform: scale(0.97);
+    opacity: 0;
+  }
+}
+.msg .from {
+  color: var(--muted);
+  font-size: 12.5px;
+  direction: ltr;
+}
+.msg .otp-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+.msg .otp {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  font-family: "Inter", monospace;
+  direction: ltr;
+}
+.msg .body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+  word-break: break-word;
+  direction: ltr;
+  text-align: left;
+}
+html[lang="ar"] .msg .body {
+  text-align: right;
+}
+.hidden {
+  display: none !important;
+}
+.footer {
+  text-align: center;
+  padding: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+}
+@media (max-width: 480px) {
+  .timer-row {
+    flex-direction: row;
+  }
+}

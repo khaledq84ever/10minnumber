@@ -1,0 +1,16 @@
+{
+  "name": "10minnumber",
+  "version": "1.0.0",
+  "description": "Disposable phone numbers — receive real SMS for 10 minutes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed-number.js",
+    "test": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
