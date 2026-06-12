@@ -40,6 +40,22 @@ body {
   font-weight: 800;
   font-size: 20px;
   letter-spacing: 0.02em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.home-ic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 16px;
+  color: var(--gold);
 }
 .brand-10 {
   color: var(--red);

@@ -168,6 +168,7 @@ window.copyText = (text, btn) => {
   });
 };
 
+$("brandHome").onclick = () => show("landing");
 $("getBtn").onclick = getNumber;
 $("againBtn").onclick = getNumber;
 $("copyNum").onclick = () => copyText($("number").dataset.raw, $("copyNum"));
